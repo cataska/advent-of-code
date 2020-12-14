@@ -62,12 +62,12 @@ fun generateMemAddress(str: String, xpos: List<Int>, lst: List<String>): List<St
     var chars = str.toCharArray()
     chars[pos] = '0'
     var string = String(chars)
-    var newLst = generateMemAddress(string, xpos.drop(1), lst)//lst.plus(generateMemAddress(string, xpos.drop(1), lst))
+    var newLst = generateMemAddress(string, xpos.drop(1), lst)
 
     chars = str.toCharArray()
     chars[pos] = '1'
     string = String(chars)
-    newLst = generateMemAddress(string, xpos.drop(1), newLst)//newLst.plus(generateMemAddress(string, xpos.drop(1), lst))
+    newLst = generateMemAddress(string, xpos.drop(1), newLst)
 
     return newLst
 }
