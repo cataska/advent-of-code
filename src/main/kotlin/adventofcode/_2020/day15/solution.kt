@@ -8,6 +8,7 @@ fun main() {
     p1(2020, preinstalled).run{ println("P1: $this") }
     p1(30000000, preinstalled).run{ println("P2: $this") }
 }
+
 fun p1(desired: Int, preinstalled: List<Int>): Int {
     val numbers = preinstalled.toMutableList()
     val history = mutableMapOf<Int, MutableList<Int>>()
@@ -15,8 +16,7 @@ fun p1(desired: Int, preinstalled: List<Int>): Int {
 
     numbers.mapIndexed { index, num -> history[num] = mutableListOf(index) }
     for (i in preinstalled.size until desired) {
-        val next: Int
-        next = if (history[last] != null) {
+        val next = if (history[last] != null) {
             if (history[last]!!.size == 1)
                 0
             else {
