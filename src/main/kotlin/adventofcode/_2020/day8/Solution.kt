@@ -4,8 +4,7 @@ import adventofcode._2020.inputText
 import java.io.File
 
 class Solution {
-    private val instructions = inputText("src/main/kotlin/adventofcode/_2020/day8/input.txt")//File("/Users/cataska/Documents/Projects/adventofcode2020/src/main/kotlin/adventofcode/_2020/day8/day9.txt")
-        //.readText()
+    private val instructions = inputText("src/main/kotlin/adventofcode/_2020/day8/input.txt")
         .trim()
         .split("\n")
         .map {
